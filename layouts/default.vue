@@ -7,8 +7,9 @@
   </template>
 
 <script setup>
-import Footer from './footer.vue';
-import Header from './header.vue';
+import Footer from './Footer.vue';
+import Header from './Header.vue';
+
 
 
 const colorMode = useColorMode()
