@@ -1,20 +1,15 @@
 <template>
     <div class="flex min-h-screen">
-    
-       
         <LeftSideBar />
-            
         <main class=" flex-1 py-10  px-5 sm:px-10 ">
-            <HeroSection/>
+            <HeroSection />
             <TopMovies />
             <NewRelease />
         </main>
-    
-       
         <RightSideBar />
-           
+
     </div>
-    </template>
+</template>
     
 <script setup>
 import HeroSection from '@/components/index/HeroSection.vue';
