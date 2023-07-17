@@ -5,9 +5,9 @@
                 <h1 class="text-2xl font-bold text-gray-700 mb-3 dark:text-white">This is your Search Result</h1>
             </div>
 
-            <div class="mx-72 px-10 py-16 bg-gray-400 dark:bg-black dark:border">
+            <div class="mx-10 px-10 py-16 bg-gray-400 dark:bg-black dark:border rounded-md">
                 <div class="mb-6">
-                    <img src="/assets/pictures/banner-one.jpg" alt="result-image" class="rounded-md border border-2 border-x-1">
+                    <img src="/assets/pictures/banner-one.jpg" alt="result-image" class="rounded-full w-48 h-48 absolute -top-5 right-0 sm::hidden">
                 </div>
                 <div class="mb-6">
                     <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Movie Title</label>

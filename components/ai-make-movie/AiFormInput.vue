@@ -4,10 +4,10 @@
             <div class="text-center mb-8 relative">
                 <h1 class="text-2xl font-bold text-gray-700 mb-3 dark:text-white">Hello, I am here to help Make Movie</h1>
                 <p class="dark:text-white">Please, write your idea below input box</p>
-                <img src="/assets/pictures/robot-1.webp" alt="" class="rounded-full w-48 h-48 absolute -top-5 right-[240px]">
+                <img src="/assets/pictures/robot-1.webp" alt="" class="rounded-full w-48 h-48 absolute -top-5 right-0 sm::hidden">
             </div>
 
-            <div class="mx-72 px-10 py-16 bg-gray-400 dark:bg-black dark:border">
+            <div class="mx-10 px-10 py-16 bg-gray-400 dark:bg-black dark:border rounded-md">
                 <div class="mb-6">
                 <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Movie
                     Title</label>
