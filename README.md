@@ -1,63 +1,31 @@
-# Nuxt 3 Minimal Starter
+# Nuxt Movie Ui Design
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+## Features
+- Easy Lay out system
+- Dark/Light system
 
-Make sure to install the dependencies:
 
-```bash
-# npm
-npm install
 
-# pnpm
-pnpm install
+## Site Home Screen Shot
 
-# yarn
-yarn install
-```
+![This is a alt text.](/public/screen-short-1.jpg)
 
-## Development Server
+---
 
-Start the development server on `http://localhost:3000`:
+## Ai Make Movie Form
 
-```bash
-# npm
-npm run dev
+![This is a alt text.](/public/screen-short-2.jpg)
 
-# pnpm
-pnpm run dev
+## Manual Make Movie Form
 
-# yarn
-yarn dev
-```
+![This is a alt text.](/public/screen-short-3.jpg)
 
-## Production
+## Make Category Form
 
-Build the application for production:
+![This is a alt text.](/public/screen-short-4.jpg)
 
-```bash
-# npm
-npm run build
+## Install and Run
 
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+1. npm install
+2. npm run dev

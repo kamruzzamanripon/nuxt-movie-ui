@@ -2,8 +2,8 @@
     <div class="bg-gray-200 p-5 rounded-md dark:bg-black">
 
         <div class="text-center mb-8 relative">
-            <h1 class="text-2xl font-bold text-gray-700 mb-3 dark:text-white">Hello, I am here to help Make Movie</h1>
-            <p class="dark:text-white">Please, write your idea below input box</p>
+            <h1 class="text-2xl font-bold text-gray-700 mb-3 dark:text-white">Manual Movie Maker</h1>
+            <img src="/assets/pictures/storytelling-08.gif" alt="" class="rounded-full w-48 h-48 absolute -top-5 right-[240px]">
         </div>
 
         <div class="mx-72 px-10 py-16 bg-gray-400 dark:bg-black dark:border">

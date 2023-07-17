@@ -14,14 +14,24 @@
     <!-- Menu -->
     <div class="mt-12 flex flex-col gap-y-4 text-gray-500 fill-gray-500 text-sm">
         <div class="text-gray-400/70  font-medium uppercase">Menu</div>
-        <RouterLink to="/" class="flex items-center space-x-2 py-1 dark:text-white  font-semibold  border-r-4 border-r-red-600 pr-20 " href="#">
+        <RouterLink 
+            to="/" 
+            class="flex items-center space-x-2 py-1   font-semibold  border-r-4 border-r-red-600 pr-20 " 
+            :class="{ 'text-green-700 dark:text-yellow-200': isActive('/') }"
+           @click="setActiveMenuItem('/')"
+        >
             <svg class="h-5 w-5 fill-red-600 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M5 22h14v0c1.1 0 2-.9 2-2v-9 0c0-.27-.11-.53-.29-.71l-8-8v0c-.4-.39-1.02-.39-1.41 0l-8 8h0c-.2.18-.3.44-.3.71v9 0c0 1.1.89 2 2 2Zm5-2v-5h4v5Zm-5-8.59l7-7 7 7V20h-3v-5 0c0-1.11-.9-2-2-2h-4v0c-1.11 0-2 .89-2 2v5H5Z"></path>
             </svg>
             <span>Home</span>
         </RouterLink>
 
-        <RouterLink to="/ai-make-movie" class="flex items-center space-x-2 py-1  group hover:border-r-4 hover:border-r-red-600 hover:font-semibold dark:hover:text-white">
+        <RouterLink 
+            to="/ai-make-movie" 
+            class="flex items-center space-x-2 py-1  group hover:border-r-4 hover:border-r-red-600 hover:font-semibold dark:hover:text-white"
+            :class="{ 'text-green-700 dark:text-yellow-200': isActive('/ai-make-movie') }"
+            @click="setActiveMenuItem('/ai-make-movie')"
+        >
             <svg class="h-5 w-5 group-hover:fill-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g>
                     <path d="M12 2C6.48 2 2 6.48 2 12c0 5.51 4.48 10 10 10 5.51 0 10-4.49 10-10 0-5.52-4.49-10-10-10Zm0 18c-4.42 0-8-3.59-8-8 0-4.42 3.58-8 8-8 4.41 0 8 3.58 8 8 0 4.41-3.59 8-8 8Z"></path>
@@ -31,7 +41,12 @@
             <span>Ai Make Movie</span>
         </RouterLink>
 
-        <RouterLink to="/manual-make-movie" class="flex items-center space-x-2 py-1  group hover:border-r-4 hover:border-r-red-600 hover:font-semibold dark:hover:text-white">
+        <RouterLink 
+            to="/manual-make-movie" 
+            class="flex items-center space-x-2 py-1  group hover:border-r-4 hover:border-r-red-600 hover:font-semibold dark:hover:text-white"
+            :class="{ 'text-green-700 dark:text-yellow-200': isActive('/manual-make-movie') }"
+            @click="setActiveMenuItem('/manual-make-movie')"
+        >
             <svg class="h-5 w-5 group-hover:fill-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g>
                     <path d="M12 2C6.48 2 2 6.48 2 12c0 5.51 4.48 10 10 10 5.51 0 10-4.49 10-10 0-5.52-4.49-10-10-10Zm0 18c-4.42 0-8-3.59-8-8 0-4.42 3.58-8 8-8 4.41 0 8 3.58 8 8 0 4.41-3.59 8-8 8Z"></path>
@@ -77,7 +92,12 @@
             <span>Friends</span>
         </a>
        
-        <nuxt-link to="/make-category" class="flex items-center space-x-1 py-1  group hover:border-r-4 hover:border-r-red-600 hover:font-semibold dark:hover:text-white ">
+        <RouterLink 
+            to="/make-category" 
+            class="flex items-center space-x-1 py-1  group hover:border-r-4 hover:border-r-red-600 hover:font-semibold dark:hover:text-white"
+            :class="{ 'text-green-700 dark:text-yellow-200': isActive('/make-category') }"
+            @click="setActiveMenuItem('/make-category')"
+            >
             <svg class="h-5 w-5 group-hover:fill-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g>
                     <path d="M12 2v0C6.47 2 2 6.47 2 12c0 5.52 4.47 10 10 10 5.52 0 10-4.48 10-10v-.001c0-5.53-4.48-10-10-10Zm0 18v0c-4.42 0-8-3.59-8-8 0-4.42 3.58-8 8-8 4.41 0 8 3.58 8 8v0c0 4.41-3.59 8-8 8Z"></path>
@@ -85,7 +105,7 @@
                 </g>
             </svg>
             <span>Make Category</span>
-        </nuxt-link>
+        </RouterLink>
         
 
         <div class="mt-8 text-gray-400/70  font-medium uppercase">General</div>
@@ -104,6 +124,15 @@
                 </g>
             </svg>
             <span>Logout</span>
+        </a> 
+        <a class=" flex items-center space-x-2 py-1  group hover:border-r-4 hover:border-r-red-600 hover:font-semibold dark:hover:text-white" href="#">
+            <svg class="h-5 w-5 group-hover:fill-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g>
+                    <path d="M16 13v-2H7V8l-5 4 5 4v-3Z"></path>
+                    <path d="M20 3h-9c-1.11 0-2 .89-2 2v4h2V5h9v14h-9v-4H9v4c0 1.1.89 2 2 2h9c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2Z"></path>
+                </g>
+            </svg>
+            <span>LogIn</span>
         </a>
 
     </div><!-- /Menu -->
@@ -111,4 +140,19 @@
 </aside><!-- /Left Sidebar -->
 </template>
 
-./LefeSideBar.vue
+
+<script setup>
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const activeMenuItem = ref(route.path);
+
+const setActiveMenuItem = (path) => {
+  activeMenuItem.value = path;
+};
+
+const isActive = (path) => {
+  return activeMenuItem.value === path;
+};
+</script>
