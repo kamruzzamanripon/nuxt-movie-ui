@@ -70,32 +70,34 @@ function validateInputs() {
 const submitForm = () => {
     isSubmitted.value = true;
     if (validateInputs()) {
-        fetchBotReply();
+        const userInput = 'text-area text as like input';
+        fetchBotReply(movieData.value.description);
+        fetchSynopsis(movieData.value.description)
     }
 };
 
-async function fetchBotReply() {
-    console.log('movieDat', movieData.value)
-    // const response = await openAi.createCompletion({
-    //     model: 'text-davinci-003',
-    //     prompt: `Generate a short message to enthusiastically say an outline sounds interesting and that you need minutes to think about it.
-    //     ###
-    //     outline: Two dogs fall in love and move to Hawaii to learn to surf.
-    //     message: I'll need tho think about that. But your iea is amazing! I love the bit about Hawaii~
-    //     ###
-    //     outline:A plane crashes in the jungle and the passengers have to walk 1000km to safety.
-    //     message: I'll spend a few moments considering that. But I love your idea!! A disaster movie in the jungle!
-    //     ###
-    //     outline: A group of corrupt lawyers try to send an innocent woman to jail.
-    //     message: Wow that is awesome! Corrupt lawyers, huh? Give me a few moments to think!
-    //     ###
-    //     outline: A thief running from bank
-    //     message: 
-    //     `,
-    //     max_tokens:60
-    // })
+async function fetchBotReply(outline) {
+    console.log('movieDat', outline)
+    const response = await openAi.createCompletion({
+        model: 'text-davinci-003',
+        prompt: `Generate a short message to enthusiastically say an outline sounds interesting and that you need minutes to think about it.
+        ###
+        outline: Two dogs fall in love and move to Hawaii to learn to surf.
+        message: I'll need tho think about that. But your iea is amazing! I love the bit about Hawaii~
+        ###
+        outline:A plane crashes in the jungle and the passengers have to walk 1000km to safety.
+        message: I'll spend a few moments considering that. But I love your idea!! A disaster movie in the jungle!
+        ###
+        outline: A group of corrupt lawyers try to send an innocent woman to jail.
+        message: Wow that is awesome! Corrupt lawyers, huh? Give me a few moments to think!
+        ###
+        outline: ${outline}
+        message: 
+        `,
+        max_tokens:60
+    })
 
-    // console.log('ai result', response.data.choices[0].text.trim())
+    console.log('fetchBotReply', response.data.choices[0].text.trim())
 }
 
 async function fetchSynopsis(outline){
@@ -112,7 +114,7 @@ async function fetchSynopsis(outline){
         max_tokens: 7000
     })
     const synopsis = response.data.choices[0].text.trim();
-
+    console.log('fetchSynopsis', synopsis)
     fetchTitle(synopsis);
     fetchStars(synopsis);
 }
@@ -125,6 +127,7 @@ async function fetchTitle(synopsis){
         temperature: 0.7
     })
     const title = response.data.choices[0].text.trim();
+    console.log('fetchTitle', title, synopsis)
     fetchImagePromt(title, synopsis)
 }
 
@@ -141,6 +144,9 @@ async function fetchStars(synopsis){
     `,
     max_tokens: 30
     })
+
+    console.log('fetchStars', response.data.choices[0].text.trim())
+    console.log('fetchStars-1', response)
 }
 
 async function fetchImagePromt(title, synopsis){
@@ -164,6 +170,7 @@ async function fetchImagePromt(title, synopsis){
     max_tokens: 100
 
     })
+    console.log('fetchImagePromt', response.data.choices[0].text.trim())
     fetchImageUrl(response.data.choices[0].text.trim())
 }
 
@@ -174,7 +181,8 @@ async function fetchImageUrl(imagePrompt){
         size: '256x256',
         response_format: 'b64_json'
     })
+    console.log('fetchImageUrl', fetchImageUrl)
 }
 
-// ...
+
 </script>

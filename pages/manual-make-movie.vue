@@ -5,7 +5,7 @@
         <!-- /Left Sidebar -->
 
         <div class="w-full px-6 mt-10">
-            <AiFormResult />
+            <FormInput />
         </div>
 
         <!-- Right Sidebar -->
@@ -15,7 +15,7 @@
 </template>
     
 <script setup>
-import AiFormResult from '@/components/ai-make-movie/AiFormResult.vue';
+import FormInput from '@/components/manual-make-movie/FormInput.vue';
 import LeftSideBar from '@/layouts/LefeSideBar.vue';
 import RightSideBar from '@/layouts/RightSideBar.vue';
 </script>

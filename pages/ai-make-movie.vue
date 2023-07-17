@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import AiFormInput from '@/components/make-movie/AiFormInput.vue';
+import AiFormInput from '@/components/ai-make-movie/AiFormInput.vue';
 import LeftSideBar from '@/layouts/LefeSideBar.vue';
 import RightSideBar from '@/layouts/RightSideBar.vue';
 </script>
